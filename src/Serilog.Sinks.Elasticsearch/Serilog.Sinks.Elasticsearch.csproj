@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <VersionPrefix>6.0.0</VersionPrefix>
+    <VersionPrefix>8.4.1.2</VersionPrefix>
     <VersionSuffix>alpha</VersionSuffix>
     <Authors>Michiel van Oudheusden, Martijn Laarman, Mogens Heller Grabe, Serilog Contributors</Authors>
     <TargetFrameworks>net461;netstandard2.0</TargetFrameworks>
@@ -11,13 +11,14 @@
     <AssemblyOriginatorKeyFile>../../assets/Serilog.snk</AssemblyOriginatorKeyFile>
     <SignAssembly>true</SignAssembly>
     <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
-    <PackageId>Serilog.Sinks.Elasticsearch</PackageId>
+    <PackageId>RiddlerKnight.Serilog.Sinks.Elasticsearch</PackageId>
     <PackageTags>serilog;elasticsearch;logging;event;collector</PackageTags>
     <PackageReleaseNotes>https://github.com/serilog/serilog-sinks-elasticsearch/blob/master/CHANGES.md</PackageReleaseNotes>
-    <PackageIconUrl>http://serilog.net/images/serilog-sink-nuget.png</PackageIconUrl>
+<!--    <PackageIconUrl>http://serilog.net/images/serilog-sink-nuget.png</PackageIconUrl>-->
     <PackageProjectUrl>https://github.com/serilog/serilog-sinks-elasticsearch</PackageProjectUrl>
-    <PackageLicenseUrl>http://www.apache.org/licenses/LICENSE-2.0</PackageLicenseUrl>
-    <RepositoryUrl>https://github.com/serilog/serilog-sinks-elasticsearch</RepositoryUrl>
+    <license>Apache-2.0</license>
+    <PackageLicenseUrl>https://www.apache.org/licenses/LICENSE-2.0</PackageLicenseUrl>
+    <RepositoryUrl>https://github.com/RiddlerKnight/serilog-sinks-elasticsearch</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <NetStandardImplicitPackageVersion Condition=" '$(TargetFramework)' == 'netstandard1.3' ">1.6.1</NetStandardImplicitPackageVersion>
     <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
@@ -26,6 +27,7 @@
     <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
     <GenerateAssemblyInformationalVersionAttribute>false</GenerateAssemblyInformationalVersionAttribute>
     <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+    <Description>This Package is fork from Serilog.Sinks.Elasticsearch</Description>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
@@ -40,11 +42,10 @@
 
   <ItemGroup>
     <DotNetCliToolReference Include="dotnet-version" Version="1.1.0" />
-
-    <ProjectReference Include="..\Serilog.Formatting.Elasticsearch\Serilog.Formatting.Elasticsearch.csproj" />
-      
+     
     <PackageReference Include="Serilog" Version="2.8.0" />
     <PackageReference Include="Serilog.Formatting.Compact" Version="1.0.0" />
+    <PackageReference Include="Serilog.Formatting.Elasticsearch" Version="8.4.1" />
     <PackageReference Include="Serilog.Sinks.File" Version="4.0.0" />
     <PackageReference Include="Serilog.Sinks.PeriodicBatching" Version="2.1.1" />
     <PackageReference Include="Elasticsearch.Net" Version="7.8.1" />

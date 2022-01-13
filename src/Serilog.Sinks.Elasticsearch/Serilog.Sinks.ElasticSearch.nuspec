@@ -4,12 +4,12 @@
     <id>Serilog.Sinks.Elasticsearch</id>
     <version>$version$</version>
     <authors>Michiel van Oudheusden, Martijn Laarman, Mogens Heller Grabe, Konstantin Erman</authors>
-    <description>The perfect way for .NET apps to write structured log events to Elasticsearch.</description>
+    <description>This Package is fork from Serilog.Sinks.Elasticsearch</description>
     <language>en-US</language>
     <projectUrl>http://serilog.net</projectUrl>
-    <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
-    <iconUrl>http://serilog.net/images/serilog-sink-nuget.png</iconUrl>
-    <repository type="git" url="https://github.com/serilog/serilog-sinks-elasticsearch" />
+    <license type="Expression">http://www.apache.org/licenses/LICENSE-2.0</license>
+    <!--<iconUrl>http://serilog.net/images/serilog-sink-nuget.png</iconUrl>-->
+    <repository type="git" url="https://github.com/RiddlerKnight/serilog-sinks-elasticsearch" />
     <tags>serilog logging elasticsearch</tags>
     <dependencies>
       <dependency id="Serilog" version="2.6.0" />
